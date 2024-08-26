@@ -89,6 +89,7 @@ public class Kata {
         return counter;
     }
 
+
     public static boolean isPalindrome(int number) {
         if (number < 10000 || number > 99999) {
             return false;
@@ -106,7 +107,7 @@ public class Kata {
 
     public static boolean isSquare(int number) {
         int squareRoot = (int) Math.sqrt(number);
-        return squareRoot * squareRoot == number ? true : false;
+        return squareRoot * squareRoot == number;
     }
 
 
