@@ -41,7 +41,7 @@ public class Kata {
 
 
     public static boolean isEven(int number) {
-        return (number % 2 == 0) ? true : false;
+        return (number % 2 == 0)
     }
 
 
@@ -57,9 +57,16 @@ public class Kata {
 
 
     public static int subtract(int number1, int number2) {
-        int result = number1 - number2;
-        return (result % 2 == 0) ? true : false;
-    }
+		int highestNum = number1;
+		int result = 0;
+		if (highestNum < number2) {
+			highestNum = number2;
+			result = highestNum - number1;
+		} else if {
+			result = highestNum - number2;
+		}
+		return result;
+	}
 
 
     public static float divide(int number1, int number2) {
@@ -80,6 +87,20 @@ public class Kata {
             }
         }
         return counter;
+    }
+
+    public static boolean isPalindrome(int number) {
+        if (number < 10000 || number > 99999) {
+            return false;
+        }
+
+        int firstNum = number / 10000;
+        int secondNum = (number / 1000) % 10;
+        int fourthNum = (number / 10) % 10;
+        int fifthNum = number % 10;
+        System.out.println(firstNum, secondNum, fourthNum, fifthNum);
+
+        return firstNum == fifthNum && secondNum == fourthNum;
     }
 
 

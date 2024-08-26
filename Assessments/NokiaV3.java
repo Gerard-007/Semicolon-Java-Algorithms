@@ -8,7 +8,7 @@ public class NokiaV3 {
 
     public static void mainMenu(Scanner inputOption) {
         while (true) {
-            System.out.println('''
+            String mainMenuDisplay = """
             Welcome to Nokia 3310
             Please select the below menu to start...
             1: Phone Book
@@ -25,7 +25,8 @@ public class NokiaV3 {
             12: Profiles
             13: SIM services
             0: Exit
-            >> ''');
+            >> """;
+            System.out.print(mainMenuDisplay);
 
             int mainMenuOption = input.nextInt();
 
@@ -81,7 +82,7 @@ public class NokiaV3 {
     public static void phoneBookMenu(Scanner inputOption) {
         boolean backToMain = false;
         while (!backToMain) {
-            System.out.println('''
+            String phoneBookMenuDisplay = """
             Phone Book
             1: Search
             2: Service Nos.
@@ -94,7 +95,8 @@ public class NokiaV3 {
             9: Speed dials
             10: Voice tags
             0: Back
-            >> ''');
+            >> """;
+            System.out.print(phoneBookMenuDisplay);
             int phonebookMenuOption = input.nextInt();
 
             switch (phonebookMenuOption) {
@@ -138,12 +140,13 @@ public class NokiaV3 {
     public static void phoneBookOptionsMenu(Scanner inputOption) {
         boolean backToPhonebookMenu = false;
         while (!backToPhonebookMenu) {
-            System.out.println('''
+            String phoneBookOptionDisplay = """
             Phone Book > Options
             1: Type of view
             2: Memory status
             0: Back
-            >> ''');
+            >> """;
+            System.out.print(phoneBookOptionDisplay);
             int phonebookOptionsMenu = input.nextInt();
 
             switch (phonebookOptionsMenu) {
@@ -163,7 +166,7 @@ public class NokiaV3 {
     public static void messageMenu(Scanner inputOption) {
         boolean backToMain = false;
         while (!backToMain) {
-            System.out.println('''
+            String messageMenuDisplay = """
             Messages
             1: Write Message
             2: Inbox
@@ -176,7 +179,10 @@ public class NokiaV3 {
             9: Voice mailbox number
             10: Service command editor
             0: Back
-            >> ''');
+            >> """;
+
+            System.out.print(messageMenuDisplay);
+
             int messageMenuOption = input.nextInt();
 
             switch (messageMenuOption) {
@@ -220,7 +226,7 @@ public class NokiaV3 {
     public static void callRegisterMenu(Scanner inputOption) {
         boolean backToMain = false;
         while (!backToMain) {
-            System.out.println('''
+            String callRegisterMenuDisplay = """
             Call Register
             1: Missed calls
             2: Received calls
@@ -231,7 +237,8 @@ public class NokiaV3 {
             7: Call cost settings
             8: Prepaid credit
             0: Back
-            >> ''');
+            >> """;
+            System.out.print(callRegisterMenuDisplay);
             int callRegisterMenuOption = input.nextInt();
 
             switch (callRegisterMenuOption) {
@@ -269,19 +276,8 @@ public class NokiaV3 {
     public static void toneMenu(Scanner inputOption) {
         boolean backToMain = false;
         while (!backToMain) {
-            System.out.println('''
-            Tone
-            1: Ringing tone
-            2: Ringing volume
-            3: Incoming call alert
-            4: Composer
-            5: Message alert tone
-            6: Keypad tones
-            7: Warning and game tones
-            8: Vibrating alert
-            9: Screen saver
-            0: Back
-            >> ''');
+            String 
+            System.out.print();
             int toneMenuOption = input.nextInt();
 
             switch (toneMenuOption) {
@@ -322,14 +318,15 @@ public class NokiaV3 {
     public static void settingsMenu(Scanner inputOption) {
         boolean backToMain = false;
         while (!backToMain) {
-            System.out.println('''
+            String settingsMenuDisplay = """
             Settings
             1: Call settings
             2: Phone settings
             3: Security settings
             4: Restore factory settings
             0: Back
-            >> ''');
+            >> """;
+            System.out.print(settingsMenuDisplay);
             int settingsMenuOption = input.nextInt();
 
             switch (settingsMenuOption) {
@@ -355,7 +352,7 @@ public class NokiaV3 {
     public static void clockMenu(Scanner inputOption) {
         boolean backToMain = false;
         while (!backToMain) {
-            System.out.println('''
+            System.out.print("""
             Clock
             1: Alarm clock
             2: Clock settings
@@ -364,7 +361,7 @@ public class NokiaV3 {
             5: Countdown timer
             6: Auto update of date and time
             0: Back
-            >> ''');
+            >> """);
             int clockMenuOption = input.nextInt();
 
             switch (clockMenuOption) {
