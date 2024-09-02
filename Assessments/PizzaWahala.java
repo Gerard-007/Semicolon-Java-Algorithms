@@ -33,28 +33,34 @@ public class PizzaWahala {
 		int boxSizes = 0;
 		String pizzaType = "";
 		float pizzaPrice = 0;
+		int numberOfSlices = 0;
 
 		if (numOfGuests <= 4) {
 			pizzaType = "Super Size";
 			pizzaPrice = 2000;
-			boxSizes = calculateNumOfBoxes(numOfGuests, 4);
+			numberOfSlices = 4;
+			boxSizes = calculateNumOfBoxes(numOfGuests, numberOfSlices);
 		} else if (numOfGuests > 4 && numOfGuests <= 6) {
 			pizzaType = "Small Money";
 			pizzaPrice = 2400;
-			boxSizes = calculateNumOfBoxes(numOfGuests, 6);
+			numberOfSlices = 6;
+			boxSizes = calculateNumOfBoxes(numOfGuests, numberOfSlices);
 		} else if (numOfGuests > 6 && numOfGuests <= 8) {
 			pizzaType = "Big boys";
 			pizzaPrice = 3000;
-			boxSizes = calculateNumOfBoxes(numOfGuests, 8);
+			numberOfSlices = 8;
+			boxSizes = calculateNumOfBoxes(numOfGuests, numberOfSlices);
 		} else if (numOfGuests > 8 && numOfGuests >= 12) {
 			pizzaType = "Odogwu";
 			pizzaPrice = 4200;
-			boxSizes = calculateNumOfBoxes(numOfGuests, 12);
+			numberOfSlices = 12;
+			boxSizes = calculateNumOfBoxes(numOfGuests, numberOfSlices);
 		}
+
 		System.out.printf("Required pizza type: %s \n", pizzaType);
 		System.out.printf("Number of boxes to buy %d \n", boxSizes);
-		System.out.printf("Number of slices %d \n", boxSizes * 12);
-		System.out.printf("Number of slices left over %d \n", (boxSizes * 12) - numOfGuests);
+		System.out.printf("Number of slices %d \n", boxSizes * numberOfSlices);
+		System.out.printf("Number of slices left over %d \n", (boxSizes * numberOfSlices) - numOfGuests);
 		System.out.printf("Total price N%.2f \n", pizzaPrice * (boxSizes * 1.0));
 	}
 }
