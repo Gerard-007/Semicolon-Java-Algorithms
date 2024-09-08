@@ -10,10 +10,10 @@ public class ReversedInteger {
             		int remainder = number % 10;
 
             		reversed = reversed * 10 + remainder;
-			System.out.printf("reversed: %d\n", reversed);
+					System.out.printf("reversed: %d\n", reversed);
  
-			number = number / 10;
-			System.out.printf("number: %d\n", number);    
+					number = number / 10;
+					System.out.printf("number: %d\n", number);    
 		}
 
         	System.out.printf("Reversed number = %d\n", reversed);
