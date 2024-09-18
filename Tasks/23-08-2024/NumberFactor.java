@@ -13,7 +13,6 @@ public class NumberFactor {
 
 	public static void main(String... args) {
 		Scanner input = new Scanner(System.in);
-		System
 		int numberVal = input.nextInt();
 	
 		int counter = 0;

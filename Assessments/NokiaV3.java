@@ -28,7 +28,7 @@ public class NokiaV3 {
             >> """;
             System.out.print(mainMenuDisplay);
 
-            int mainMenuOption = input.nextInt();
+            int mainMenuOption = inputOption.nextInt();
 
             if (mainMenuOption == 0) {
                 System.out.println("Exiting... Goodbye!");
@@ -97,7 +97,7 @@ public class NokiaV3 {
             0: Back
             >> """;
             System.out.print(phoneBookMenuDisplay);
-            int phonebookMenuOption = input.nextInt();
+            int phonebookMenuOption = inputOption.nextInt();
 
             switch (phonebookMenuOption) {
                 case 0:
@@ -147,7 +147,7 @@ public class NokiaV3 {
             0: Back
             >> """;
             System.out.print(phoneBookOptionDisplay);
-            int phonebookOptionsMenu = input.nextInt();
+            int phonebookOptionsMenu = inputOption.nextInt();
 
             switch (phonebookOptionsMenu) {
                 case 0:
@@ -183,7 +183,7 @@ public class NokiaV3 {
 
             System.out.print(messageMenuDisplay);
 
-            int messageMenuOption = input.nextInt();
+            int messageMenuOption = inputOption.nextInt();
 
             switch (messageMenuOption) {
                 case 0:
@@ -239,10 +239,10 @@ public class NokiaV3 {
             0: Back
             >> """;
             System.out.print(callRegisterMenuDisplay);
-            int callRegisterMenuOption = input.nextInt();
+            int callRegisterMenuOption = inputOption.nextInt();
 
             switch (callRegisterMenuOption) {
-                case 0
+                case 0:
 	                backToMain = true;
 	                break;
                 case 1:
@@ -276,10 +276,7 @@ public class NokiaV3 {
     public static void toneMenu(Scanner inputOption) {
         boolean backToMain = false;
         while (!backToMain) {
-            String 
-            System.out.print();
-            int toneMenuOption = input.nextInt();
-
+            int toneMenuOption = inputOption.nextInt();
             switch (toneMenuOption) {
                 case 0:
 	                backToMain = true;
@@ -327,7 +324,7 @@ public class NokiaV3 {
             0: Back
             >> """;
             System.out.print(settingsMenuDisplay);
-            int settingsMenuOption = input.nextInt();
+            int settingsMenuOption = inputOption.nextInt();
 
             switch (settingsMenuOption) {
                 case 0:
@@ -362,7 +359,7 @@ public class NokiaV3 {
             6: Auto update of date and time
             0: Back
             >> """);
-            int clockMenuOption = input.nextInt();
+            int clockMenuOption = inputOption.nextInt();
 
             switch (clockMenuOption) {
                 case 0:

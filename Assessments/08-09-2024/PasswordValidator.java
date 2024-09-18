@@ -13,7 +13,15 @@ public class PasswordValidator {
         int digitCount = 0;
 
         for (int i = 0; i < password.length(); i++) {
-            //...
+            char ch = password.charAt(i);
+
+            if (!Character.isLetterOrDigit(ch)) {
+                return false;
+            }
+
+            if (Character.isDigit(ch)) {
+                digitCount++;
+            }
         }
 
         return digitCount > 2 ? true : false;
