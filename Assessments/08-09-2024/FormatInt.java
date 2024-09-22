@@ -26,9 +26,7 @@ public class FormatInt {
         for (int i = 0; i < width - numStr.length(); i++) {
             convertedInt.append('0');
         }
-
         convertedInt.append(numStr);
-
         return convertedInt.toString();
     }
 }

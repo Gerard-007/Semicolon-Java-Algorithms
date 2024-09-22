@@ -13,6 +13,7 @@ public class RandomGame {
 				playRandomGame(input);
 			} else {
 				System.out.println("Exiting program...");
+				break;
 			}	
 		}
 	}
