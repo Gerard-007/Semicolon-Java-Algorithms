@@ -1,6 +1,6 @@
 public class ConvertToMillis {
     public static void main(String[] args) {
-        System.out.println(convertMillis(1000));     // Example: 01:01:01
+        System.out.println(convertMillis(1000));
     }
 
     public static String convertMillis(long millis) {
