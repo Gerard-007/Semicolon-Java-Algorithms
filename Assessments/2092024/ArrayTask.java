@@ -1,4 +1,4 @@
-public class Array {
+public class ArrayTask {
     public static void getLargestElement(int[] array) {
         int largest = array[0];
         for(int i = 0; i < array.length; i++) {

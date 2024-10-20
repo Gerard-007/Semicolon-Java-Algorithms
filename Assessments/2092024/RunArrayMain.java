@@ -1,4 +1,4 @@
-public class Main {
+public class RunArrayMain {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 535};
 
