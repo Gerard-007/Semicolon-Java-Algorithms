@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class RunCardValidityMain {
-    public void main(String[] args) {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         CardValidity cardValidity = new CardValidity();
@@ -21,5 +21,7 @@ public class RunCardValidityMain {
                 System.out.println("The card number is invalid.");
             }
         }
+
+        scanner.close();
     }
 }
