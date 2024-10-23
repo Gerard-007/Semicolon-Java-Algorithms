@@ -32,22 +32,22 @@ public class MenstralApp {
                 System.out.println("You are still an underage young lady comback when you are 12yrs and above...");
                 break;
             } else {
-             //....   
+                MenstralApp.checkPeriod(currentMentralDateCount, menstralCycleDays);
             }
         }
     }
 
 
-    public static void checkPeriod(int currentDateCount, int menstralCycleDays) {
+    public static void checkPeriod(long currentDateCount, int menstralCycleDays) {
         if(menstralCycleDays >= 21 || menstralCycleDays <=35) {
             if(currentDateCount >= 1 && currentDateCount <=5) {
-                System.out.printf("You are in your mensuration period!\n");
+                System.out.printf("You are in your mensuration period, your current date count is %d!\n", currentDateCount);
             } else if(currentDateCount >= 6 && currentDateCount <= 13) {
-                System.out.printf("You are in your follicular period!\n");
+                System.out.printf("You are in your follicular period, your current date count is %d!\n", currentDateCount);
             } else if(currentDateCount == 14) {
-                System.out.printf("You are in your ovulation period!\\n");
+                System.out.printf("You are in your ovulation period, your current date count is %d!\n", currentDateCount);
             } else if(currentDateCount >= 15 && currentDateCount <= 21 || currentDateCount <= 35) {
-                System.out.printf("You are in your luteal period! please protect your self during sex at this period\n");
+                System.out.printf("You are in your luteal period, your current date count is %d \n please protect your self during sex at this period\n", currentDateCount);
             }
         } else {
             System.out.println("You need a medical attention!");
