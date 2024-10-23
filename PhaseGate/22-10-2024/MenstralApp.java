@@ -8,32 +8,44 @@ public class MenstralApp {
         Scanner input = new Scanner(System.in);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-        System.out.print("Enter your name: ");
-        String username = input.next();
+        try {
+            System.out.print("Enter your name: ");
+            String username = input.next();
+    
+            System.out.print("Enter your Age: ");
+            int age = input.nextInt();
+    
+            System.out.print("Enter your last menstral date (dd/mm/yyyy): ");
+            String lastMenstralDate = input.next();
+    
+            System.out.print("Enter the number of your menstral cycle days in total: ");
+            int menstralCycleDays = input.nextInt();
 
-        System.out.print("Enter your Age: ");
-        int age = input.nextInt();
+            LocalDate formattedLastMenstralDate = LocalDate.parse(lastMenstralDate, formatter);
+            LocalDate currentDate = LocalDate.now();
+            
+            long currentMentralDateCount = ChronoUnit.DAYS.between(formattedLastMenstralDate, currentDate);
+            System.out.println(currentMentralDateCount);
+            input.close();
 
-        System.out.print("Enter your last menstral date (dd/mm/yyyy): ");
-        String lastMenstralDate = input.next();
-
-        System.out.print("Enter the number of your menstral cycle days in total: ");
-        int menstralCycleDays = input.nextInt();
-
-        LocalDate formattedLastMenstralDate = LocalDate.parse(lastMenstralDate, formatter);
-        LocalDate currentDate = LocalDate.now();
-        
-        long currentMentralDateCount = ChronoUnit.DAYS.between(formattedLastMenstralDate, currentDate);
-        System.out.println(currentMentralDateCount);
-        input.close();
-
-        while(true) {
-            if(age < 12) {
-                System.out.println("You are still an underage young lady comback when you are 12yrs and above...");
-                break;
-            } else {
-                MenstralApp.checkPeriod(currentMentralDateCount, menstralCycleDays);
+            while(true) {
+                if(age < 12) {
+                    System.out.println("You are still an underage young lady comback when you are 12yrs and above...");
+                    break;
+                } else {
+                    MenstralApp.checkPeriod(currentMentralDateCount, menstralCycleDays);
+                }
             }
+        }
+            catch(Exception e) {
+            System.out.printf("""
+            Invalid input please follow the example below
+            EG:
+                - Enter your name: Gerard Nwazk
+                - Enter your Age: 400
+                - Enter your last menstral date (dd/mm/yyyy): 01/12/1970
+                - Enter the number of your menstral cycle days in total: 28
+            """);
         }
     }
 
