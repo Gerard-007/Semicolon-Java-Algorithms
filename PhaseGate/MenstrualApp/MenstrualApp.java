@@ -34,7 +34,7 @@ public class MenstrualApp {
             MenstrualApp.checkPeriod(username, currentMenstrualDateCount, menstrualCycleDays);
         } catch (Exception e) {
             System.out.printf("""
-            Invalid input. Please follow the example below:
+            Invalid input. Please follow the example below to input your details:
             EG:
                 - Enter your name: Geraldine Nwazk
                 - Enter your Age: 24
