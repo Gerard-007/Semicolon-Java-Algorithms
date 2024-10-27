@@ -12,8 +12,6 @@ def add_students_and_scores(num_of_students, num_of_subjects):
             student_grades.append(score)
         grades.append(student_grades.copy())
         student_grades.clear()
-    print(students)
-    print(grades)
 
 
 def calculate_score_total():
@@ -29,7 +27,7 @@ def calculate_score_total():
 def calculate_score_average(num_of_subjects):
     avg = 0
     for index in range(len(students)):
-        avg = grades[index][num_of_subjects-1]/num_of_subjects
+        avg = grades[index][-1]/num_of_subjects
         grades[index].append(avg)
     print(students)
     print(grades)
@@ -54,12 +52,12 @@ def display_student_grades():
     """)
     for index in range(len(students)):
         print(students[index])
-        print("\t")
-        for grade in grades[index]:
-            print(grade, end=" ")
+        for gindex in range(len(grades[index])):
+            print(grades[index][gindex], end=" ")
 
 
 num_of_students = int(input("Enter number of students: "))
+
 num_of_subjects = int(input("Enter number of subjects: "))
 
 add_students_and_scores(num_of_students, num_of_subjects)
