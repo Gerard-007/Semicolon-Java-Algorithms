@@ -30,7 +30,10 @@ def search_contact(name: str) -> str:
 
 def edit_contact(name: str) -> str:
     for contact in contacts:
-        if name.lower() == contact.get("first_name").lower() or name.lower() == contact.get("last_name").lower():
+        if name.lower() in [
+            contact.get("first_name").lower(),
+            contact.get("last_name").lower(),
+        ]:
             new_number = validate_phone_number()
             contact["phone_number"] = new_number
             return f"Contact updated! Name: {contact.get('first_name')} {contact.get('last_name')}, Phone: {contact.get('phone_number')}"
@@ -39,20 +42,22 @@ def edit_contact(name: str) -> str:
 
 def delete_contact(name: str) -> str:
     for index, contact in enumerate(contacts):
-        if name.lower() == contact.get("first_name").lower() or name.lower() == contact.get("last_name").lower():
+        if name.lower() in [
+            contact.get("first_name").lower(),
+            contact.get("last_name").lower(),
+        ]:
             full_name = f"{contact.get('first_name')} {contact.get('last_name')}"
             option = input(f"Warning! Are you sure you wish to delete {full_name}? (y/n): ")
-            if option.lower() == "y" or option.lower() == "yes":
-                del contacts[index]
-                return f"Contact {full_name} deleted successfully."
-            else:
+            if option.lower() not in ["y", "yes"]:
                 return f"Delete for {full_name} was canceled."
+            del contacts[index]
+            return f"Contact {full_name} deleted successfully."
     return "Contact not found to delete."
 
 
 while True:
     menu = str(input("Select from the menu (add, search, edit, delete, exit): "))
-    
+
     match menu.lower():
         case "add":
             print(add_contact(contacts))

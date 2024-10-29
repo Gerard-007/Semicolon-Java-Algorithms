@@ -70,7 +70,22 @@ def check_balance(name: str) -> str:
 
 
 def transfer_money(from_name: str, to_name: str, amount: float) -> str:
-    return f""
+    pin = input("Enter your PIN to proceed with the transfer: ")
+    from_account = next((acc for acc in accounts if acc.get("first_name").lower() == from_name.lower() or acc.get("last_name").lower() == from_name.lower()), None)
+    to_account = next((acc for acc in accounts if acc.get("first_name").lower() == to_name.lower() or acc.get("last_name").lower() == to_name.lower()), None)
+
+    if from_account is None:
+        return "Sender account not found."
+    if to_account is None:
+        return "Recipient account not found."
+    if pin != from_account.get("pin"):
+        return "Incorrect PIN. Transfer failed."
+    if amount > from_account["balance"]:
+        return "Insufficient funds."
+
+    from_account["balance"] -= amount
+    to_account["balance"] += amount
+    return f"N{amount} transferred from {from_account['first_name']} {from_account['last_name']} to {to_account['first_name']} {to_account['last_name']}."
 
 
 while True:
