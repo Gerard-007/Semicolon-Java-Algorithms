@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="MenstrualApp">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/PhaseGate/MenstrualApp/junit-jupiter-api-5.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/PhaseGate/MenstrualApp/junit-platform-console-standalone-1.11.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

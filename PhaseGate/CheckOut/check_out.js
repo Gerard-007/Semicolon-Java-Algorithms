@@ -1,4 +1,4 @@
-const prompt = require("prompt-sync")({sigint:true});
+const prompt = require("prompt-sync")();
 
 cart = [];
 
@@ -75,10 +75,12 @@ const processCustomerTransaction = (customerName) => {
                 console.log(`${customerName} paid ₦${customerPaid} successfully!`);
                 break;
             } else if (customerPaid > billing) {
-                console.log(`${customerName} has paid but would be balanced with ₦${(customerPaid - billing)}`);
+                console.log(`${customerName} has paid but would be balanced with ₦${customerPaid - billing}`);
                 break;
             } else if (customerPaid < billing) {
-                console.log(`${customerName}'s payment is incomplete, remaining ₦${(billing - customerPaid)} to complete payment.`);
+                let newBill = billing;
+                newBill -= customerPaid;
+                console.log(`${customerName}'s payment is incomplete, remaining ₦${newBill} to complete payment.`);
                 continue;
             }
         }
@@ -92,6 +94,7 @@ const processCustomerTransaction = (customerName) => {
 while (true) {
     const option = prompt("Enter 'start' to process customer transaction or (end/exit) to close:");
     if (['exit', 'close', 'end'].includes(option.toLowerCase())) {
+        cart.splice(0, cart.length);
         break;
     } else if (option.toLowerCase() === 'start') {
         const customerName = prompt("What is the name of the customer: ");

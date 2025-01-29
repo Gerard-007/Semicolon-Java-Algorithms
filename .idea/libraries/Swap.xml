@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Swap">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Tasks/16-10-2024/Swap/junit-jupiter-api-5.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Tasks/16-10-2024/Swap/junit-platform-console-standalone-1.11.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

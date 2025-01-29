@@ -9,7 +9,7 @@ def add_account(accounts: list) -> str:
         first_name=first_name,
         last_name=last_name,
         pin=pin,
-        balance=0.0  # Initialize balance to 0
+        balance=0.0
     ))
     return f"Account {first_name} {last_name} created successfully"
 

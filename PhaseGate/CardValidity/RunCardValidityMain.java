@@ -16,7 +16,10 @@ public class RunCardValidityMain {
         } else {
             System.out.println("Card Type: " + cardValidity.getCardType(cardNumber));
             if (cardValidity.cardIsValid(cardNumber)) {
-                System.out.println("The card number is valid.");
+	System.out.println("============================");
+	System.out.printf("Card length: %d\n", cardNumber.length());
+	System.out.printf("Card Number: %s\n", cardNumber);
+               System.out.println("The card number is valid.");
             } else {
                 System.out.println("The card number is invalid.");
             }

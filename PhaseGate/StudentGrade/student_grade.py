@@ -22,7 +22,7 @@ def calculate_score_total():
         grades[index].append(total)
     print(students)
     print(grades)
-    
+
 
 def calculate_score_average(num_of_subjects):
     avg = 0
@@ -31,7 +31,7 @@ def calculate_score_average(num_of_subjects):
         grades[index].append(avg)
     print(students)
     print(grades)
-    
+
 
 def calculate_position():
     averages_with_indices = []

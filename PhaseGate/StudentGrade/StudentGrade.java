@@ -94,7 +94,7 @@ public class StudentGrade {
 
     public static void displaySubjectSummary(int scores, String[] students, int[][] grades) {
         System.out.println("SUBJECT SUMMARY\n");
-        
+
         for(int s = 0; s < scores; s++) {
             System.out.printf("Subject %d\n", s + 1);
             int highestScore = 0;
@@ -139,7 +139,5 @@ public class StudentGrade {
         }
     }
 
-    
     public static void calculatePosition(int scores, String[] students, int[][] grades){}
 }
- 

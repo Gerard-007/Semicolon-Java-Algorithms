@@ -31,15 +31,10 @@ public class CardValidity {
             int digit = Character.getNumericValue(cardNumber.charAt(i));
 
             if (doubleDigit) {
-                System.out.printf("douleDigit before: %B\n", doubleDigit);
-                System.out.printf("digit before: %d\n", digit);
                 digit *= 2;
-                System.out.printf("digit after: %d\n", digit);
             }
             if (digit > 9) {
-                System.out.printf("digit > 9 before: %d\n", digit);
                 digit -= 9;
-                System.out.printf("digit > 9 after: %d\n", digit);
                 //5399831619690403
             }
             sum += digit;

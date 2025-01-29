@@ -20,7 +20,7 @@ def checkout_invoice(customer: str, cashier: str, discount: float, cart: list) -
     vat = subtotal * 0.075
     billing = subtotal + vat - discount
     invoice = "\n".join(
-        f"{item['item_name']}\t {item['item_quantity']}\t ₦{item['item_price']:.2f}\t ₦{item['total']:.2f}"
+        f"{item['item_name']}\t{item['item_quantity']}\t₦{item['item_price']:.2f}\t₦{item['total']:.2f}"
         for item in cart
     )
     return (f"""
@@ -47,10 +47,7 @@ def checkout_invoice(customer: str, cashier: str, discount: float, cart: list) -
     """, billing)
 
 
-customer_name = input("What is the name of the customer: ")
-
-
-def process_customer_transaction():
+def process_customer_transaction(customer_name):
     while True:
         add_item_to_cart(cart)
         more_item_option = input("Do you want to add more items? (y/n): ")
@@ -81,7 +78,8 @@ while True:
     if option.lower() in ["exit", "close", "end"]:
         break
     elif option.lower() == "start":
-        process_customer_transaction()
+        customer_name = input("What is the name of the customer: ")
+        process_customer_transaction(customer_name)
     else:
         print("Invalid option enter (start or end/exit) to close transaction")
         continue
